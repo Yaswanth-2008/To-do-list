@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-list</title>
+    <script src="https://kit.fontawesome.com/0ad8a4842d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="flex_fit">
+            <h1 class="Header">To-do-<span class="accent_txt">LIST</span></h1>
+        </div><br>
+        <div class="input-container sub_container">
+            <input type="text" id="Add_task" class="Add_task no_brdr">
+            <button onclick="AddClicked()" class="TODO_btn btn no_brdr" id="TODO_btn">ADD</button>
+        </div>
+        <div class="tasks-container sub_container">
+            <div class='task'>
+                <h2>
+                    <ul class='task_ul' id='task_ul' id="List_data">
+                        <li>{task_label} <span class="clickable" onclick="DeleteClicked(this)" ><i class="fa-solid fa-trash"></i></span></li>
+                    </ul>
+                </h2>
+
+            </div>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
