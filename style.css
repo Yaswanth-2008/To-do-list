@@ -1,15 +1,17 @@
 :root{
     --ff :'DM Sans', sans-serif;
     --h1 : bold 54px/64px var(--ff);
+    --h2 : light 27px/54px var(--ff);
     --primary_1 : rgba(20, 20, 20, 1.0);
     --primary_2 : rgba(60, 60, 60, 0.8);
     --primary_3 : rgba(100, 100, 100, 0.5);
+    --primary_4 : rgba(70, 70, 70, 0.8);
     --secondary_1 : rgba(228, 238, 228, 1.0);
     --secondary_2 : rgba(202, 212, 202, 0.8);
-    --secondary_2 : rgba(195, 202, 195, 0.8);
+    --secondary_3 : rgba(195, 202, 195, 0.8);
     --text_clr : rgba(235, 235, 240, 0.9);
-    --accent_1 : rgba(10, 88, 255, 0.8);
-    --accent_2 : rgba(255,255,10,1.0);
+    --accent_1 : rgba(39, 74, 151, 0.8);
+    --accent_2 : rgb(23, 138, 23);
 }
 
 *{
@@ -53,15 +55,42 @@ body{
     display : flex;
     width : fit-content;
 }
-li{
+.task_li{
+    font : var(--h2);
     margin: 20px 0px;
+
 }
-ul{
+.task_ul{
     padding: 0px;
     display: flex;
     flex-direction: column;
 }
-
+/* input slot */
+.Add_task{
+    background-color: var(--primary_3);
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    width: max(16rem,40vw);
+    height: 4rem;
+}
+/* ADD btn */
+.TODO_btn{
+    border-radius : 1rem;
+    margin-left: 1rem ;
+    width: min(16rem,40vw);
+    height: 4rem;
+}
+.task{
+    width: 100%;
+}
+.task_li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 
@@ -82,16 +111,16 @@ ul{
     display : flex;
 }
 .clickable{
-    border: 2px solid var(--secondary_1);
-    margin-left: 30rem;
-    padding: 4px 6px;
+    scale: 1.2;
     background-color: var(--primary_2);
+    border: 4px solid var(--primary_3);
+    padding: 4px 6px;
     transition: color 0.5s ease, background-color 0.5 ease;
 }
 .clickable:hover{
-    cursor:pointer;
-    border: 2px solid white;
+    border: 4px solid red;
     background-color: white;
-    color: red ;
+    cursor:pointer;
+    color: rgb(196, 35, 35) ;
 }
 
