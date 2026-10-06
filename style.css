@@ -1,21 +1,24 @@
 :root{
     --ff :'DM Sans', sans-serif;
     --h1 : bold 54px/64px var(--ff);
+    --h2 : light 27px/54px var(--ff);
     --primary_1 : rgba(20, 20, 20, 1.0);
     --primary_2 : rgba(60, 60, 60, 0.8);
     --primary_3 : rgba(100, 100, 100, 0.5);
+    --primary_4 : rgba(70, 70, 70, 0.8);
     --secondary_1 : rgba(228, 238, 228, 1.0);
-    --secondary_2 : rgba(202, 212, 202, 0.8);
-    --secondary_2 : rgba(195, 202, 195, 0.8);
+    --secondary_2 : rgba(223, 233, 223, 0.164);
+    --secondary_3 : rgba(195, 202, 195, 0.8);
+    --secondary_4 : rgba(155, 161, 155, 0.8);
     --text_clr : rgba(235, 235, 240, 0.9);
-    --accent_1 : rgba(10, 88, 255, 0.8);
-    --accent_2 : rgba(255,255,10,1.0);
+    --accent_1 : rgb(18, 107, 18);
+    --accent_2 :rgb(23, 138, 23);
 }
 
 *{
     margin: 0;
     font-family: var(--ff);
-
+    color: var(--text_clr);
 }
 
 body{
@@ -36,7 +39,7 @@ body{
 .container{ /* size and position stuff */
     margin : 10px;
     width: fit-content;
-    padding: 24px;
+    padding: 3rem 6rem;
 }
 .sub_container{
     background-color: var(--primary_3);
@@ -53,16 +56,61 @@ body{
     display : flex;
     width : fit-content;
 }
-li{
-    margin: 20px 0px;
+.task{
+    width: 100%;
 }
-ul{
+.task_ul{
     padding: 0px;
     display: flex;
     flex-direction: column;
 }
+.task_li{
 
+    font : var(--h2);
+    margin: 10px 15px;
+    background-color: var(--primary_3);
+    height: fit-content;
 
+}
+.task_li{
+    border-radius: 0px;
+    font-size: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.1s ease;
+}
+.task_li:hover{
+    cursor: pointer;
+    background-color: var(--secondary_2);
+}
+
+/* input slot */
+.Add_task{
+    background-color: var(--primary_3);
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    /* width: max(16rem,40vw); */
+    height: Clamp(4rem,6rem,8rem);
+    width: 20dvw;
+}
+/* ADD btn */
+.TODO_btn{
+    border-radius : 1rem;
+    margin-left: 1rem ;
+    width: clamp(8rem,12rem,16rem);
+    height: clamp(4rem,6rem,8rem);
+    font-weight: bold  ;
+    font-size: 1.5rem;
+}
+.TODO_btn:hover{
+    cursor:pointer;
+    background-color: var(--accent_1);
+}
 
 
 /* toggle in HTML only */
@@ -82,16 +130,18 @@ ul{
     display : flex;
 }
 .clickable{
-    border: 2px solid var(--secondary_1);
-    margin-left: 30rem;
-    padding: 4px 6px;
+    scale: 1.2;
     background-color: var(--primary_2);
+    border: 4px solid var(--primary_3);
+    padding: 4px 6px;
     transition: color 0.5s ease, background-color 0.5 ease;
 }
 .clickable:hover{
+    border: 4px solid red;
+    background-color: var(--secondary_2);
     cursor:pointer;
-    border: 2px solid white;
-    background-color: white;
-    color: red ;
-}
 
+}
+.gentle_bdr_radius{
+    border-radius:1ch;
+}
