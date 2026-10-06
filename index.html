@@ -9,18 +9,18 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container gentle_bdr_radius">
         <div class="flex_fit">
             <h1 class="Header">To-do-<span class="accent_txt">LIST</span></h1>
         </div><br>
-        <div class="input-container sub_container">
+        <div class="gentle_bdr_radius input-container sub_container">
             <input type="text" id="Add_task" class="Add_task no_brdr">
             <button onclick="AddClicked()" class="TODO_btn btn no_brdr" id="TODO_btn">ADD</button>
         </div>
-        <div class="tasks-container sub_container">
+        <div class="gentle_bdr_radius tasks-container sub_container">
             <div class='task'>
-                    <ul class='task_ul' id='task_ul' id="List_data">
-                        <li class="task_li">{task_label} <span class="trash_can clickable" onclick="DeleteClicked(this)" ><i class="fa-solid fa-trash"></i></span></li>
+                    <ul class='gentle_bdr_radius task_ul' id='task_ul' id="List_data">
+                        <li class="task_li" onclick="Task_Done(this)">Add You Tasks <span class="trash_can clickable" onclick="DeleteClicked(this)" ><i class="fa-solid fa-trash"></i></span></li>
                     </ul>
 
             </div>

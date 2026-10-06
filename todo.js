@@ -1,5 +1,5 @@
 const Add_task = document.querySelector('.TODO_btn');
-const to_do_list = document.getElementById("task_ul");
+const to_do_list =document.getElementById("task_ul");
 let task_input_txt = document.getElementById('Add_task');
 let Div_snippet;
 let Function_element
@@ -8,7 +8,7 @@ function AddClicked(){
     let task_label = task_input_txt.value;
     if (task_label){
         Div_snippet = `
-        <li class='task_li'>${task_label} <span class="trash_can clickable" onclick="DeleteClicked(this)" ><i class="fa-solid fa-trash"></i></span></li>
+        <li class="gentle_bdr_radius task_li" onclick="Task_Done(this)" >${task_label} <span class="trash_can clickable" onclick="DeleteClicked(this)" ><i class="fa-solid fa-trash"></i></span></li>
     `;
         to_do_list.insertAdjacentHTML('beforeend', Div_snippet );
     }
@@ -16,4 +16,14 @@ function AddClicked(){
 function DeleteClicked(element){
     Function_element = element;
     Function_element.parentElement.remove();
+}
+
+function Task_Done(element){
+    Function_element = element;
+    if (Function_element.style.textDecoration != "line-through"){
+        Function_element.style.textDecoration = "line-through";
+    }
+    else{
+        Function_element.style.textDecoration = "none";
+    }
 }
